@@ -1,5 +1,10 @@
 #!/bin/bash
 
+function update {
+	sudo apt-get update
+	sudo apt-get upgrade
+}
+
 if [ -z $1 ]; then
 	echo -e "\033[91mInformation\033[0m"
 elif [ $1 == 'install' ]; then
