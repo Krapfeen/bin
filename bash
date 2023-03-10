@@ -49,6 +49,10 @@ elif [ $1 == 'git' ]; then
 	else
 		echo -e "\033[91mMiss argument\033[0m"
 	fi
+    
+elif [ $1 == 'update' ]; then
+
+	update
 
 else
 	echo -e "\033[91mMiss command\033[0m"
