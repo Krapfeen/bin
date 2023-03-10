@@ -25,6 +25,8 @@ elif [ $1 == 'install' ]; then
 
 		echo -e "\033[92mInstallation finished, packages installed\033[0m"
 		node --version && npm --version
+    elif [ $2 == 'git' ]; then
+        sudo apt install git-all
 	else
 		echo -e "\033[91mMiss argument\033[0m"
 	fi
