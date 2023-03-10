@@ -14,6 +14,17 @@ elif [ $1 == 'install' ]; then
 		echo -e "\033[92mSSH key configuration is finished\033[0m"
 		cat ~/.ssh/id_ed25519
 		cat ~/.ssh/id_ed25519.pub
+    elif [ $2 == 'npm' ]; then
+        sudo apt install curl
+		sudo curl -o https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+		command -v nvm
+		nvm ls
+		nvm install --lts
+		install node
+		nvm ls
+
+		echo -e "\033[92mInstallation finished, packages installed\033[0m"
+		node --version && npm --version
 	else
 		echo -e "\033[91mMiss argument\033[0m"
 	fi
